@@ -213,6 +213,7 @@ var styles = StyleSheet.create({
     marginRight: 10
   },
   item_container: {
+    flex: 1,
     flexDirection: 'row',
     paddingHorizontal: 20,
   },
