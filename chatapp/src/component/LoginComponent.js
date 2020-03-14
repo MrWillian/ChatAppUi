@@ -30,7 +30,7 @@ export default class LoginComponent extends React.Component {
         <View style={styles.footer}>
           <TextInput style={styles.textInput} placeholder="Username" />
           <TextInput style={styles.textInput} placeholder="Password" secureTextEntry />
-          <TouchableOpacity onPress={()=>this.props.navigation.navigate('Messages')}>
+          <TouchableOpacity onPress={()=>this.props.navigation.navigate('MessagesScreen')}>
             <LinearGradient 
               start={{x: 0, y: 0}}
               colors={['#39b54a', '#006837']} style={styles.login}>
