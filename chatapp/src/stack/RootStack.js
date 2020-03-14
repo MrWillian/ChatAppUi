@@ -7,25 +7,125 @@ import MessagesComponent from '../component/MessagesComponent';
 import ContactComponent from '../component/ContactComponent';
 import NotificationComponent from '../component/NotificationComponent';
 
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 const Tabnavigator = createMaterialBottomTabNavigator({
-  Messages: {
+  MessagesScreen: {
     screen: MessagesComponent,
     navigationOptions: {
-      tabBarLabel: 'Messages'
+      tabBarLabel: 'Messages',
+      tabBarOptions: {
+        tabStyle: {
+          paddingVertical: 10
+        },
+        style: {
+          height: 50,
+          backgroundColor: 'white',
+          elevation: 10,
+          borderTopWidth: 0,
+        },
+        labelStyle: {
+          margin: 0,
+          padding: 0,
+        },
+        showIcon: true,
+        showLabel: true,
+        activeTintColor: 'green',
+        inactiveTintColor: 'gray',
+      },
+      // tabBarIcon: ({tintColor, focused}) => {
+      //   if(focused) {
+      //     return (
+      //       <MaterialIcons name="message" size={25} color={tintColor} />
+      //     )
+      //   } else {
+      //     return (
+      //       <MaterialIcons name="message" size={25} color={tintColor} />
+      //     )
+      //   }
+      // }
     }
   },
   ContactScreen: {
     screen: ContactComponent,
     navigationOptions: {
-      tabBarLabel: 'Contact'
+      tabBarLabel: 'Contact',
+      tabBarOptions: {
+        tabStyle: {
+          paddingVertical: 10
+        },
+        style: {
+          height: 50,
+          backgroundColor: 'white',
+          elevation: 10,
+          borderTopWidth: 0,
+        },
+        labelStyle: {
+          margin: 0,
+          padding: 0,
+        },
+        showIcon: true,
+        showLabel: true,
+        activeTintColor: 'green',
+        inactiveTintColor: 'gray',
+      },
+      // tabBarIcon: ({tintColor, focused}) => {
+      //   if(focused) {
+      //     return (
+      //       <MaterialIcons name="contacts" size={25} color={tintColor} />
+      //     )
+      //   } else {
+      //     return (
+      //       <MaterialIcons name="contacts" size={25} color={tintColor} />
+      //     )
+      //   }
+      // }
     }
   },
   NotificationScreen: {
     screen: NotificationComponent,
     navigationOptions: {
-      tabBarLabel: 'Notification'
+      tabBarLabel: 'Notification',
+      tabBarOptions: {
+        tabStyle: {
+          paddingVertical: 10
+        },
+        style: {
+          height: 50,
+          backgroundColor: 'white',
+          elevation: 10,
+          borderTopWidth: 0,
+        },
+        labelStyle: {
+          margin: 0,
+          padding: 0,
+        },
+        showIcon: true,
+        showLabel: true,
+        activeTintColor: 'green',
+        inactiveTintColor: 'gray',
+      },
+      // tabBarIcon: ({tintColor, focused}) => {
+      //   if(focused) {
+      //     return (
+      //       <MaterialIcons name="notifications" size={25} color={tintColor} />
+      //     )
+      //   } else {
+      //     return (
+      //       <MaterialIcons name="notifications" size={25} color={tintColor} />
+      //     )
+      //   }
+      // }
     }
   },
+}, {
+  initialRouteName: 'MessagesScreen',
+  activeColor: 'green',
+  inactiveColor: 'gray',
+  barStyle: {
+    backgroundColor: 'white',
+  },
+  shifting: true,
 });
 
 const Stacknavigator = createStackNavigator({
